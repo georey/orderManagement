@@ -15,12 +15,12 @@ class CreateFilesTable extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('client_id');
+            $table->unsignedInteger('client_format_id');
             $table->string('name');
             $table->timestamps();
 
-            $table->index('client_id');
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->index('client_format_id');
+            $table->foreign('client_format_id')->references('id')->on('client_formats');
         });
     }
 
