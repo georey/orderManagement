@@ -21,11 +21,11 @@ class CreateClientFormatDetailValidationsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->index('client_format_detail_id');
+            /*$table->index('client_format_detail_id');
             $table->foreign('client_format_detail_id')->references('id')->on('client_format_details');
 
             $table->index('validation_id');
-            $table->foreign('validation_id')->references('id')->on('validations');
+            $table->foreign('validation_id')->references('id')->on('validations');*/
         });
     }
 

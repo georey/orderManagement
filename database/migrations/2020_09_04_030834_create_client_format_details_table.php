@@ -22,11 +22,11 @@ class CreateClientFormatDetailsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->index('client_format_id');
+           /* $table->index('client_format_id');
             $table->foreign('client_format_id')->references('id')->on('client_formats');
 
             $table->index('parent_id');
-            $table->foreign('parent_id')->references('id')->on('client_format_details');
+            $table->foreign('parent_id')->references('id')->on('client_format_details');*/
         });
     }
 

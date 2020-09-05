@@ -22,9 +22,9 @@
                 <td>NFL</td>
                 <td>XLS</td>
                 <td>
-                    <a href="{{route('mapper.detail')}}" title="Details" class="btn-sm"><i class="fas fa-list"></i></a> |
-                    <a href="{{route('mapper.destroy')}}" title="Delete" class="btn-sm"><i class="fas fa-trash-alt"></i></a> |
-                    <a href="{{route('mapper.restore')}}" title="Destroy" class="btn-sm"><i class="fas fa-redo-alt"></i></a>
+                    <a href="{{route('mapper.detail', ['id' => 1])}}" title="Details" class="btn-sm"><i class="fas fa-list"></i></a> |
+                    <a href="{{route('mapper.destroy', ['id' => 1])}}" title="Delete" class="btn-sm"><i class="fas fa-trash-alt"></i></a> |
+                    <a href="{{route('mapper.restore', ['id' => 1])}}" title="Destroy" class="btn-sm"><i class="fas fa-redo-alt"></i></a>
                 </td>
             </tr>
             <tr>
@@ -32,9 +32,9 @@
                 <td>NFL</td>
                 <td>JSON</td>
                 <td>
-                    <a href="{{route('mapper.detail')}}" title="Details" class="btn-sm"><i class="fas fa-list"></i></a> |
-                    <a href="{{route('mapper.destroy')}}" title="Delete" class="btn-sm"><i class="fas fa-trash-alt"></i></a> |
-                    <a href="{{route('mapper.restore')}}" title="Destroy" class="btn-sm"><i class="fas fa-redo-alt"></i></a>
+                    <a href="{{route('mapper.detail', ['id' => 2])}}" title="Details" class="btn-sm"><i class="fas fa-list"></i></a> |
+                    <a href="{{route('mapper.destroy', ['id' => 2])}}" title="Delete" class="btn-sm"><i class="fas fa-trash-alt"></i></a> |
+                    <a href="{{route('mapper.restore', ['id' => 2])}}" title="Destroy" class="btn-sm"><i class="fas fa-redo-alt"></i></a>
                 </td>
             </tr>
             </tbody>

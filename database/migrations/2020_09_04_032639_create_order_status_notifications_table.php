@@ -20,8 +20,8 @@ class CreateOrderStatusNotificationsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->index('order_status_id');
-            $table->foreign('order_status_id')->references('id')->on('order_statuses');
+            /*$table->index('order_status_id');
+            $table->foreign('order_status_id')->references('id')->on('order_statuses');*/
         });
     }
 

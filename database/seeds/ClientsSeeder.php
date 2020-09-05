@@ -20,8 +20,7 @@ class ClientsSeeder extends Seeder
         $clients[] = [
             'id' => 2,
             'name' => 'NFS',
-            'description' => null,
-            'deleted_at' => 'now()'
+            'description' => null
         ];
 
         foreach ($clients as $client) {

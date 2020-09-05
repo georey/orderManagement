@@ -19,11 +19,11 @@ class CreateOrderStatusLogsTable extends Migration
             $table->unsignedInteger('order_id');
             $table->timestamps();
 
-            $table->index('order_status_id');
+            /*$table->index('order_status_id');
             $table->foreign('order_status_id')->references('id')->on('order_statuses');
 
             $table->index('order_id');
-            $table->foreign('order_id')->references('id')->on('orders');
+            $table->foreign('order_id')->references('id')->on('orders');*/
         });
     }
 

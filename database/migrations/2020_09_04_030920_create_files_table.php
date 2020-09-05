@@ -19,8 +19,8 @@ class CreateFilesTable extends Migration
             $table->string('name');
             $table->timestamps();
 
-            $table->index('client_format_id');
-            $table->foreign('client_format_id')->references('id')->on('client_formats');
+            /*$table->index('client_format_id');
+            $table->foreign('client_format_id')->references('id')->on('client_formats');*/
         });
     }
 

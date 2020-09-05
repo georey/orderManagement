@@ -20,8 +20,8 @@ class CreateOrdersTable extends Migration
             $table->json('data');
             $table->timestamps();
 
-            $table->index('file_id');
-            $table->foreign('file_id')->references('id')->on('files');
+            /*$table->index('file_id');
+            $table->foreign('file_id')->references('id')->on('files');*/
         });
     }
 

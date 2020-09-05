@@ -25,17 +25,17 @@ class MapperController extends Controller
         // formulario crear client formato
     }
 
-    public function destroy()
+    public function destroy($id)
     {
         // formulario crear client formato
     }
 
-    public function restore()
+    public function restore($id)
     {
         // formulario crear client formato
     }
 
-    public function detail()
+    public function detail($id)
     {
         // formulario campo y validacion
     }
@@ -45,12 +45,12 @@ class MapperController extends Controller
         // pantalla principal con todos los clientes y formatos
     }
 
-    public function updateDetail()
+    public function updateDetail($id)
     {
         // pantalla principal con todos los clientes y formatos
     }
 
-    public function destroyDetail()
+    public function destroyDetail($id)
     {
         // pantalla principal con todos los clientes y formatos
     }
