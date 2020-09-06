@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 require_once "web/mapper.php";
+require_once "web/data.php";
