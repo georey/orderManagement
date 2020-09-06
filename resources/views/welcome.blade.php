@@ -5,7 +5,7 @@
 @section('content')
     <div class="row">
         <div class="offset-3 col-md-4">
-            <img src="{{asset('media/img/mapper.png')}}">
+            <img style="padding: 40px" src="{{asset('media/img/mapper.png')}}">
         </div>
     </div>
 @endsection

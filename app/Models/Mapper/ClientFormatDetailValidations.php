@@ -17,7 +17,7 @@ class ClientFormatDetailValidations extends Model
         return $this->belongsTo('App\Models\Mapper\ClientFormatDetails', 'client_format_detail_id');
     }
 
-    public function validation()
+    public function clientFormatDetailValidation()
     {
         return $this->belongsTo('App\Models\Maintenance\Validations', 'validation_id');
     }

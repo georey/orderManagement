@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mapper;
 
 use App\Http\Controllers\Controller;
+use App\Models\Maintenance\OutputFields;
 use App\Models\Maintenance\Validations;
 use App\Models\Mapper\ClientFormatDetailValidations;
 use Illuminate\Http\Request;
@@ -42,6 +43,7 @@ class MapperController extends Controller
     {
         $data['client_format'] = ClientFormats::where('id',$id)->first();
         $data['validations'] = Validations::all();
+        $data['output_fields'] = OutputFields::all();
         $data['client_format_details'] = ClientFormatDetails::where('client_format_id',$id)->get();
         return view('Mapper.detail')->with($data);
     }
@@ -53,6 +55,7 @@ class MapperController extends Controller
         $ClientFormatDetails->description = $request->description;
         $ClientFormatDetails->parent_id = $request->parent_id;
         $ClientFormatDetails->client_format_id = $request->client_format_id;
+        $ClientFormatDetails->output_field_id = $request->output_field_id;
 
         $ClientFormatDetails->save();
 

@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(FormatsSeeder::class);
         $this->call(OrderStatusesSeeder::class);
         $this->call(ValidationsSeeder::class);
+        $this->call(OutputFieldsSeeder::class);
     }
 }
