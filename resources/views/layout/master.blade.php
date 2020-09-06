@@ -51,5 +51,5 @@
 <script src="{{asset('plugins/bootstrap-4.5.2/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('plugins/select2-4.1.0/dist/js/select2.min.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
-
+@yield('script')
 </html>
