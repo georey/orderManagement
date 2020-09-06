@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Order Managament">
     <meta name="author" content="Giovanni Reinoza">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>OM - @yield('title')</title>
 

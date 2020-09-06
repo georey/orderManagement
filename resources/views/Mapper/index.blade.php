@@ -17,26 +17,24 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>1</td>
-                <td>NFL</td>
-                <td>XLS</td>
-                <td>
-                    <a href="{{route('mapper.detail', ['id' => 1])}}" title="Details" class="btn-sm"><i class="fas fa-list"></i></a> |
-                    <a href="{{route('mapper.destroy', ['id' => 1])}}" title="Delete" class="btn-sm"><i class="fas fa-trash-alt"></i></a> |
-                    <a href="{{route('mapper.restore', ['id' => 1])}}" title="Destroy" class="btn-sm"><i class="fas fa-redo-alt"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>NFL</td>
-                <td>JSON</td>
-                <td>
-                    <a href="{{route('mapper.detail', ['id' => 2])}}" title="Details" class="btn-sm"><i class="fas fa-list"></i></a> |
-                    <a href="{{route('mapper.destroy', ['id' => 2])}}" title="Delete" class="btn-sm"><i class="fas fa-trash-alt"></i></a> |
-                    <a href="{{route('mapper.restore', ['id' => 2])}}" title="Destroy" class="btn-sm"><i class="fas fa-redo-alt"></i></a>
-                </td>
-            </tr>
+            @foreach($client_formats as $client_format)
+                <tr>
+                    <td>{{$client_format->id}}</td>
+                    <td>{{$client_format->client->name}}</td>
+                    <td>{{$client_format->format->name}}</td>
+                    <td>
+                        <a href="{{route('mapper.detail', ['id' => $client_format->id])}}" title="Details"
+                           class="btn-sm"><i class="fas fa-list"></i></a> |
+                        @if(isset($client_format->deleted_at))
+                            <a href="{{route('mapper.restore', ['id' => $client_format->id])}}" title="Destroy"
+                               class="btn-sm"><i class="fas fa-redo-alt"></i></a>
+                        @else
+                            <a href="{{route('mapper.destroy', ['id' => $client_format->id])}}" title="Delete"
+                               class="btn-sm"><i class="fas fa-trash-alt"></i></a>
+                        @endif
+                    </td>
+                </tr>
+            @endforeach
             </tbody>
         </table>
     </div>

@@ -19,7 +19,12 @@ class ClientFormatDetails extends Model
 
     public function clientFormatDetailValidation()
     {
-        return $this->hasMany('App\Models\Mapper\ClientFormatDetailValidations');
+        return $this->hasMany('App\Models\Mapper\ClientFormatDetailValidations','client_format_detail_id');
+    }
+
+    public function details()
+    {
+        return $this->hasMany('App\Models\Mapper\ClientFormatDetails', 'parent_id');
     }
 
     public function getChildren($id)
