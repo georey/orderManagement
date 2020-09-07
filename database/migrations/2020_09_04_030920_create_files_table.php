@@ -17,6 +17,7 @@ class CreateFilesTable extends Migration
             $table->id();
             $table->unsignedInteger('client_format_id');
             $table->string('name');
+            $table->string('url');
             $table->timestamps();
 
             /*$table->index('client_format_id');

@@ -21,4 +21,9 @@ class ClientFormats extends Model
     {
         return $this->belongsTo('App\Models\Maintenance\Formats', 'format_id');
     }
+
+    public function clientFormatDetails()
+    {
+        return $this->hasMany('App\Models\Mapper\ClientFormatDetails', 'client_format_id');
+    }
 }

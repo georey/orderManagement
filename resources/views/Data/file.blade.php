@@ -22,4 +22,19 @@
             <button type="submit" class="btn btn-primary">Upload</button>
         </div>
     </form>
+    @if(Session::has('flash_info'))
+        <div class="alert
+            @if(Session::get('flash_info')['success'])
+            alert-success
+            @else
+            alert-danger
+            @endif" role="alert">
+            {{Session::get('flash_info')['message']}}<br>
+            @if(Session::has('flash_info')['errors'])
+                @foreach(Session::get('flash_info')['errors'] as $error)
+                {{ implode('', $error) }}<br>
+                @endforeach
+            @endif
+        </div>
+    @endif
 @endsection
