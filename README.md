@@ -1,4 +1,4 @@
-# ERP GIO DEX MAMADISIMO SSJ DIOS TORTUGA NINJA DECEPTICON master of the universe lomo plateado zidane cabeceador
+# Order Management
 
 ![Solution Logo](https://serving.photos.photobox.com/44990638669a326e90cfa17bcae272834892d1f2007bd5c2257d9c6a143aab1058c00a0c.jpg)
 
@@ -12,8 +12,8 @@
 
   * Open a console and clone the repository, and enter to the directory
     ```sh
-    $ git clone ****************************
-    $ cd ********
+    $ git clone https://github.com/georey/orderManagement.git
+    $ cd orderManagement
     ```
   * Setting the **enviroment** files
     * Copy **/.env-example** located in the root directory and paste it in the **/docker** folder
@@ -47,8 +47,9 @@
     
   * In a new console navigate to the docker folder an enter to the bash with the following command:
     ```sh
-    $ cd docker
-    $ docker-compose ***********
+    $ cd laradock
+    $ docker-compose up -d mysql phpmyadmin apache2 workspace
+    $ docker-compose exec workspace bash
     ```
   * Install the PHP dependencies with composer with the following command:
     ```sh
